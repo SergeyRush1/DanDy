@@ -26,7 +26,26 @@ val lightColorPalette = DanDColor(
     navigationElementColor = Color(0xFF9E9E9E),
     bottomColor = Color(0xFF02B3B3),
     focusIconColor = Color(0xFF000000),
-    unFocusIconColor = Color(0xFF292929)
+    unFocusIconColor = Color(0xFF292929),
+    //Switch color
+    checkedThumbColor = Color(0xFF02B3B3),
+    checkedTrackColor = Color(0xFF02B3B3),
+    checkedBorderColor = Color(0xFF02B3B3),
+    checkedIconColor =Color(0xFF02B3B3),
+    disabledCheckedBorderColor = Color(0xFF02B3B3),
+    disabledCheckedIconColor = Color(0xFF02B3B3),
+    disabledCheckedThumbColor = Color(0xFF02B3B3),
+    disabledCheckedTrackColor = Color(0xFF02B3B3),
+    disabledUncheckedBorderColor = Color.Red,
+    disabledUncheckedIconColor = Color.Red,
+    disabledUncheckedThumbColor = Color.Red,
+    disabledUncheckedTrackColor = Color.Red,
+    uncheckedBorderColor = Color(0xFFFFE020),
+    uncheckedIconColor  = Color.Red,
+    uncheckedThumbColor = Color(0xFFC0C0C0),
+    uncheckedTrackColor = Color(0xFFC0C0C0),
+    sunColorOnSwich = Color(0xFFFFE020),
+    munColorOnSwitch = Color(0xFF00326F)
 )
 val nightColorPalette = DanDColor(
     blueUser = Color(0xFF8EB2DD),
@@ -52,7 +71,26 @@ val nightColorPalette = DanDColor(
     navigationElementColor = Color(0xFF292929),
     bottomColor = Color(0xFF226464),
     focusIconColor = Color(0xFF575757),
-    unFocusIconColor = Color(0xFF292929)
+    unFocusIconColor = Color(0xFF292929),
+    //Switch colors
+    checkedThumbColor = Color(0xFF000000), //фон  в иконке
+    checkedTrackColor = Color(0xFF000000), //фон внутри свича
+    checkedBorderColor =Color(0xFF00326F), // Фон обводки свича
+    checkedIconColor =Color.Red,
+    disabledCheckedBorderColor = Color.Red,
+    disabledCheckedIconColor = Color.Red,
+    disabledCheckedThumbColor = Color.Red,
+    disabledCheckedTrackColor = Color.Red,
+    disabledUncheckedBorderColor = Color.Red,
+    disabledUncheckedIconColor = Color.Red,
+    disabledUncheckedThumbColor = Color.Red,
+    disabledUncheckedTrackColor = Color.Red,
+    uncheckedBorderColor = Color.Red,
+    uncheckedIconColor  = Color.Red,
+    uncheckedThumbColor = Color.Red,
+    uncheckedTrackColor = Color.Red,
+    sunColorOnSwich = Color(0xFFFFE020),
+    munColorOnSwitch = Color(0xFF00326F)
 
 )
 val blueLightPalette = lightColorPalette.copy(

@@ -25,6 +25,7 @@ import com.example.dand.screens.SplashScreenDanD
 import com.example.dand.screens.mainSreen.MainView
 import com.example.dand.screens.mainSreen.MainViewModel
 import com.example.dandy.screens.SettingsScreen
+import com.example.dandy.screens.mainSreen.screens.TestScreen
 import com.example.dandy.ui.theme.DanDyTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
@@ -61,6 +62,9 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = "main") {
                     composable("splash") {
                         SplashScreenDanD(navController = navController)
+                    }
+                    composable("test"){
+                        TestScreen(settingsSaver = settingsSaver, settings = settings)
                     }
                     composable("settings"){
                         SettingsScreen(modifier = Modifier,

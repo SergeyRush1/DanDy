@@ -46,10 +46,10 @@ fun MainScreen(navController: NavController,settings:Settings){
         MainBottomScreen.Map,
         MainBottomScreen.Chat)
 
-    Scaffold(scaffoldState = scaffoldState, drawerContent = {
-       DrawContent(navController)
-    }) {
-
+    Scaffold(scaffoldState = scaffoldState,
+        drawerContent = {
+       DrawContent(navController,scaffoldState) }
+    ) {
         Column(verticalArrangement = Arrangement.Bottom, modifier = Modifier.padding(it)) {
             Box(modifier = Modifier.weight(1f)) {
                 NavHost(
@@ -57,28 +57,17 @@ fun MainScreen(navController: NavController,settings:Settings){
                     startDestination = MainBottomScreen.Chat.route
                 ) {
                     dailyFlow(navController)
-                   // composable("map"){
-                     //   MapScreen()
-                    //}
-//                    composable(MainBottomScreen.Settings.route) {
-//                        SettingsScreen(
-//                            settings = settings,
-//                            onSettingsChanged = onSettingsChanged,
-//                            localUser = localUser!!
-//                        )
-//                    }
-//                    composable(MainBottomScreen.Profile.route) {
-//                        val profileViewModel = hiltViewModel<UserProfileViewModel>()
-//                        UserProfileView(
-//                            profileViewModel = profileViewModel,
-//                            localUser = localUser!!,
-//                            changeLocalUser = localUserChange,
-//                            mainColorChange = mainColorChange
-//                        )
-//                    }
-//                    composable(MainBottomScreen.Event.route) {
-//                        AnimatableExample()
-//                    }
+                    composable(MainBottomScreen.Map.route) {
+                        MapScreen(navController = navController)
+                    }
+
+                    composable(MainBottomScreen.Chat.route) {
+                        //val chatViewModel = hiltViewModel<Model>()
+                        // chatViewModel.loadRooms()
+                        //ChatView(navController = navController, chatViewModel = chatViewModel)
+                        ChatScreen()
+                    }
+
                 }
             }
 
@@ -96,9 +85,10 @@ fun MainScreen(navController: NavController,settings:Settings){
 
                     items.forEach { screen ->
                         val isSelected =
-                            currentDestination?.hierarchy?.any { it.route == screen.route } == true
+                            currentDestination?.hierarchy
+                                ?.any { it.route == screen.route } == true
                         BottomNavigationItem(
-                            modifier = Modifier.background(DanDTheme.color.bottomColor),
+                            modifier = Modifier.background(DanDTheme.color.tintColor),
                             icon = {
                                 Icon(
                                     painter = when (screen) {
@@ -106,12 +96,12 @@ fun MainScreen(navController: NavController,settings:Settings){
                                         MainBottomScreen.Map -> painterResource(id = screen.resourceId)
                                         MainBottomScreen.Chat -> painterResource(id = screen.resourceId)
                                     }, contentDescription = null,
-                                    tint = if (isSelected) DanDTheme.color.focusIconColor else DanDTheme.color.unFocusIconColor
+                                    tint = if (isSelected) DanDTheme.color.errorColor else DanDTheme.color.sunColorOnSwich
                                 )
                             }, label = {
                                 Text(
                                     stringResource(id = screen.resName),
-                                    color = if (isSelected) DanDTheme.color.focusIconColor else DanDTheme.color.unFocusIconColor
+                                    color = if (isSelected) DanDTheme.color.errorColor else DanDTheme.color.sunColorOnSwich
                                 )
                             }, selected = isSelected,
                             onClick = {

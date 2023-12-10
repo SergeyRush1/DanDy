@@ -14,20 +14,20 @@ fun NavGraphBuilder.dailyFlow(
     navController: NavController,
 
     ) {
-    navigation(startDestination = "chat", route = MainBottomScreen.Chat.route) {
-        composable("chat") {
-            //val chatViewModel = hiltViewModel<Model>()
-            // chatViewModel.loadRooms()
-            //ChatView(navController = navController, chatViewModel = chatViewModel)
-        ChatScreen()
-        }
+    navigation(startDestination = "person", route = MainBottomScreen.Profile.route) {
+//        composable("chat") {
+//            //val chatViewModel = hiltViewModel<Model>()
+//            // chatViewModel.loadRooms()
+//            //ChatView(navController = navController, chatViewModel = chatViewModel)
+//        ChatScreen()
+//        }
         composable("person"){
             PersonScreen()
           //  NewRoomCreated(navController)
         }
-        composable("map"){
-            MapScreen(navController)
-        }
+//        composable("map"){
+//            MapScreen(navController)
+//        }
 
     }
 }

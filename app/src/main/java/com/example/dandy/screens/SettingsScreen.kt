@@ -44,7 +44,7 @@ fun SettingsScreen(modifier: Modifier,
                    settingsSaver: SettingsPreferences,
                    onSettingChange: (Settings) -> Unit,
 ){
-    var themeIcon by remember {mutableStateOf(R.drawable.baseline_nightlight_24) }
+    //var themeIcon by remember {mutableStateOf(R.drawable.baseline_nightlight_24) }
     Surface(
         modifier = modifier,
         color = DanDTheme.color.backgroundItem,
@@ -126,8 +126,8 @@ fun SettingsScreen(modifier: Modifier,
                             else -> throw NotImplementedError("No valid value for this $it")
                         }
                     )
-                    //settingsmemorySaver.setSize(FONT_SIZE,settingsNew.textSize)
-                    //   onSettingsChanged.invoke(settingsNew)
+                    settingsSaver.setTextSize(settingsNew.textSize)
+                    onSettingChange.invoke(settingsNew)
                 }
             )
 //            MyMessageItem(bitmap = FirebaseHelper(LocalContext.current).paintBitmap(localUser.avatar!!.image_name)?:

@@ -49,11 +49,10 @@ class SettingsPreferences(context: Context) {
         }
     }
 
-    @SuppressLint("CommitPrefEdits")
     fun setCorners(corner:DanDCorners){
         when(corner){
-            DanDCorners.Flat -> setingsPref.edit().putString(CORNER_STYLE, FLAT)
-            DanDCorners.Rounded -> setingsPref.edit().putString(CORNER_STYLE, ROUNDED)
+            DanDCorners.Flat -> setingsPref.edit().putString(CORNER_STYLE, FLAT).apply()
+            DanDCorners.Rounded -> setingsPref.edit().putString(CORNER_STYLE, ROUNDED).apply()
         }
     }
     fun getCorners():DanDCorners{
@@ -73,12 +72,11 @@ class SettingsPreferences(context: Context) {
         else -> DanDSize.Medium
     }
    }
-    @SuppressLint("CommitPrefEdits")
     fun setTextSize(size:DanDSize){
         when(size){
-            DanDSize.Medium -> setingsPref.edit().putString(TEXT_SIZE, MEDIUM)
-            DanDSize.Small -> setingsPref.edit().putString(TEXT_SIZE, SMALL)
-            DanDSize.Big -> setingsPref.edit().putString(TEXT_SIZE, BIG)
+            DanDSize.Medium -> setingsPref.edit().putString(TEXT_SIZE, MEDIUM).apply()
+            DanDSize.Small -> setingsPref.edit().putString(TEXT_SIZE, SMALL).apply()
+            DanDSize.Big -> setingsPref.edit().putString(TEXT_SIZE, BIG).apply()
         }
     }
 
@@ -88,9 +86,8 @@ class SettingsPreferences(context: Context) {
         return setingsPref.getBoolean(DARK_MODE,false)
     }
 
-    @SuppressLint("CommitPrefEdits")
     fun setDarckMode(darckMode:Boolean){
-        setingsPref.edit().putBoolean(DARK_MODE,darckMode)
+        setingsPref.edit().putBoolean(DARK_MODE,darckMode).apply()
     }
     fun getStyle():DanDStyle{
         return when( setingsPref.getString(STYLE,"black")){
@@ -104,14 +101,14 @@ class SettingsPreferences(context: Context) {
     }
 
 
-    @SuppressLint("CommitPrefEdits")
+
     fun setStyle(style:DanDStyle){
         when(style){
-            DanDStyle.Black -> setingsPref.edit().putString(STYLE, BLACK)
-            DanDStyle.Blue -> setingsPref.edit().putString(STYLE, BLUE)
-            DanDStyle.Yellow -> setingsPref.edit().putString(STYLE, YELLOW)
-            DanDStyle.Red -> setingsPref.edit().putString(STYLE, RED)
-            DanDStyle.Green -> setingsPref.edit().putString(STYLE, GREEN)
+            DanDStyle.Black -> setingsPref.edit().putString(STYLE, BLACK).apply()
+            DanDStyle.Blue -> setingsPref.edit().putString(STYLE, BLUE).apply()
+            DanDStyle.Yellow -> setingsPref.edit().putString(STYLE, YELLOW).apply()
+            DanDStyle.Red -> setingsPref.edit().putString(STYLE, RED).apply()
+            DanDStyle.Green -> setingsPref.edit().putString(STYLE, GREEN).apply()
         }
     }
 }

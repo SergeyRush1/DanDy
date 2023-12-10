@@ -34,31 +34,33 @@ fun ThemeSwitch(darkMode:Boolean,
                 true -> {
                     Icon(
                         painter = painterResource(id = R.drawable.baseline_nightlight_24),
-                        contentDescription = "checked",tint = DanDTheme.color.focusIconColor)
+                        contentDescription = "checked",
+                        tint = DanDTheme.color.munColorOnSwitch)
                 }
                 false -> Icon(
                     painter = painterResource(id = R.drawable.baseline_wb_sunny_24),
-                    contentDescription = "checked", tint = DanDTheme.color.focusIconColor
+                    contentDescription = "checked",
+                    tint = DanDTheme.color.sunColorOnSwich
                 )
             }
 
         }, colors = androidx.compose.material3.SwitchDefaults.colors(
-            checkedThumbColor = DanDTheme.color.backround,
-            checkedTrackColor = Color.Black,
-            checkedBorderColor = Color.Red,
-            checkedIconColor =Color.Red,
-            disabledCheckedBorderColor = Color.Red,
-            disabledCheckedIconColor = Color.Red,
-            disabledCheckedThumbColor = DanDTheme.color.backround,
-            disabledCheckedTrackColor = Color.Red,
-            disabledUncheckedBorderColor = Color.Red,
-            disabledUncheckedIconColor = Color.Red,
-            disabledUncheckedThumbColor = Color.Red,
-            disabledUncheckedTrackColor = Color.Red,
-            uncheckedBorderColor = Color.Red,
-            uncheckedIconColor  = Color.Red,
-            uncheckedThumbColor = Color.Red,
-            uncheckedTrackColor = Color.Red))
+            checkedThumbColor = DanDTheme.color.checkedThumbColor,
+            checkedTrackColor = DanDTheme.color.checkedTrackColor,
+            checkedBorderColor = DanDTheme.color.checkedBorderColor,
+            checkedIconColor =DanDTheme.color.checkedIconColor,
+            disabledCheckedBorderColor = DanDTheme.color.disabledCheckedBorderColor,
+            disabledCheckedIconColor = DanDTheme.color.disabledCheckedIconColor,
+            disabledCheckedThumbColor = DanDTheme.color.disabledCheckedThumbColor,
+            disabledCheckedTrackColor = DanDTheme.color.disabledCheckedTrackColor,
+            disabledUncheckedBorderColor = DanDTheme.color.disabledUncheckedBorderColor,
+            disabledUncheckedIconColor = DanDTheme.color.disabledUncheckedIconColor,
+            disabledUncheckedThumbColor = DanDTheme.color.disabledUncheckedThumbColor,
+            disabledUncheckedTrackColor = DanDTheme.color.disabledUncheckedTrackColor,
+            uncheckedBorderColor = DanDTheme.color.uncheckedBorderColor,
+            uncheckedIconColor  = DanDTheme.color.uncheckedIconColor,
+            uncheckedThumbColor = DanDTheme.color.uncheckedThumbColor,
+            uncheckedTrackColor = DanDTheme.color.uncheckedTrackColor))
 }
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
