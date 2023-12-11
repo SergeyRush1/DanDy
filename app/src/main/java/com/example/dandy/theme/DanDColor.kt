@@ -45,7 +45,9 @@ val lightColorPalette = DanDColor(
     uncheckedThumbColor = Color(0xFFC0C0C0),
     uncheckedTrackColor = Color(0xFFC0C0C0),
     sunColorOnSwich = Color(0xFFFFE020),
-    munColorOnSwitch = Color(0xFF00326F)
+    munColorOnSwitch = Color(0xFF00326F),
+    selectedHero = Color(0xFF00326F),
+    unselectedHero = Color(0xFFC0C0C0)
 )
 val nightColorPalette = DanDColor(
     blueUser = Color(0xFF8EB2DD),
@@ -90,7 +92,9 @@ val nightColorPalette = DanDColor(
     uncheckedThumbColor = Color.Red,
     uncheckedTrackColor = Color.Red,
     sunColorOnSwich = Color(0xFFFFE020),
-    munColorOnSwitch = Color(0xFF00326F)
+    munColorOnSwitch = Color(0xFF00326F),
+    selectedHero = Color(0xFF00326F),
+    unselectedHero = Color(0xFFC0C0C0)
 
 )
 val blueLightPalette = lightColorPalette.copy(

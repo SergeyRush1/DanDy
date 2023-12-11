@@ -1,5 +1,6 @@
 package com.example.dandy
 
+import HeroImage
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -59,12 +60,13 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 
-                NavHost(navController = navController, startDestination = "main") {
+                NavHost(navController = navController, startDestination = "test") {
                     composable("splash") {
                         SplashScreenDanD(navController = navController)
                     }
                     composable("test"){
-                        TestScreen(settingsSaver = settingsSaver, settings = settings)
+                        //TestScreen(settingsSaver = settingsSaver, settings = settings)
+                        HeroImage()
                     }
                     composable("settings"){
                         SettingsScreen(modifier = Modifier,

@@ -159,10 +159,11 @@ fun ImageCropper(
       // val ImageMod = Modifier.size(containerWidth,containerHeight)
         val imageModifier = Modifier
             .size(containerWidth, containerHeight)
-            .crop(
-               keys = resetKeys,
-                cropState = cropState
-            )
+        //непонятно что с модифаером. нет crop
+            //  .crop(
+              // keys = resetKeys,
+                //cropState = cropState
+            //)
 
         LaunchedEffect(key1 = cropProperties) {
             cropState.updateProperties(cropProperties)

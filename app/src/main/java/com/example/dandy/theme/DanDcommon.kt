@@ -31,6 +31,8 @@ data class DanDColor(val blueUser: Color,
                      val bottomColor:Color,
                      val focusIconColor:Color,
                      val unFocusIconColor: Color,
+                     val selectedHero:Color,
+                     val unselectedHero:Color,
     //swith colors
                     val checkedThumbColor:Color,
                      val checkedTrackColor:Color,

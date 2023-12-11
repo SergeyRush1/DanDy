@@ -80,4 +80,5 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
     implementation ("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
     implementation("androidx.compose.material:material:1.5.4")
+    implementation(kotlin("script-runtime"))
 }
