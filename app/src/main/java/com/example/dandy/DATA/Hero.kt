@@ -1,54 +1,60 @@
 package com.example.dandy.DATA
+//раса содержит название и описание рассы
+data class Race(val name:String,
+                val description:String)
+//название и описание бэка
+data class BackGround(val name:String,
+                      val description:String)
+data class Hero(val name:String?, //имя игрового персонажа
+                val race: Race?, // расса персонажа
+                val level:Int?, // уровень
+                val background: BackGround?, // предистория
+                val alignment:String?, //мировоззрение
 
-data class Race(val name:String, val description:String)
-data class BackGround(val name:String, val description:String)
-data class Hero(val name:String?,
-                val race: Race?,
-                val level:Int?,
-                val background: BackGround?,
-                val alignment:String?,
 
-
-                var armor:Int?,
+                var armor:Int?, //броня
                 var HP:Int?,
-                val tmHP:Int?,
+                val tmHP:Int?,// текущее здоровье
 
-                val strenght:Int?,
-                val dexterity:Int?,
-                val constitution:Int?,
-                val intellice:Int?,
-                val wisdom:Int?,
-                val charisma:Int?,
-
-                val stStrenght:Int?,
-                val stDexterity:Int?,
-                val spConstitution:Int?,
-                val stIntelligence:Int?,
-                val stWisdom:Int?,
-                val stChatrisma:Int?,
+                val strenght:Int?, //сила
+                val dexterity:Int?,// ловкость
+                val constitution:Int?,// телосложение
+                val intellice:Int?, // интелект
+                val wisdom:Int?, // мудрость
+                val charisma:Int?, // харизма
+        //saving throws
+                val stStrenght:Int?, //спасбросок сила
+                val stDexterity:Int?, // спасбросок ловкость
+                val stConstitution:Int?, // спасбросок телосложение
+                val stIntelligence:Int?, // спасбросок интелект
+                val stWisdom:Int?, //спасброок мудрость
+                val stChatrisma:Int?,//спасбросок харизма
     //skills
-                val  acrobatics:Int?,
-                val animanHandling:Int?,
-                val arcana:Int?,
-                val athletics:Int?,
-                val deseption:Int?,
-                val history:Int?,
-                val insight:Int?,
-                val investigation:Int?,
-                val medicine:Int?,
-                val nature:Int?,
+                val  acrobatics:Int?,//акробатика
+                val animanHandling:Int?,// запугивание
+                val arcana:Int?,//
+                val athletics:Int?,//атлетика
+                val deseption:Int?, // обман
+                val history:Int?, // история
+                val insight:Int?, //проницательность
+                val investigation:Int?,//анализ
+                val medicine:Int?,//медицина
+                val nature:Int?,//природа
                 val perception:Int?,
-                val perfomance:Int?,
-                val persuasion:Int?,
-                val religion:Int?,
-                val sleightOfHand:Int?,
-                val stealth:Int?,
-                val survival:Int?,
+                val perfomance:Int?,//выступление
+                val persuasion:Int?,//убеждение
+                val religion:Int?,//религия
+                val sleightOfHand:Int?,// ловкость рук
+                val stealth:Int?,//скрытность
+                val survival:Int?,//выживание
                 val passivePerceptions:Int?,//пассивная внимательность
+                val proficiencyBonus:Int?,//бонус мастерства
+                val inspiration:Int?,//вдохновение
 ) {
     companion object createHero{
-        fun createNewHero (): Hero {
-            var newHero = Hero(name = null,
+        fun createNewHero(): Hero {
+            return Hero(
+                name = null,
                 race = null,
                 level = null,
                 background = null,
@@ -64,7 +70,7 @@ data class Hero(val name:String?,
                 charisma = null,
                 stStrenght = null,
                 stDexterity = null,
-                spConstitution = null,
+                stConstitution = null,
                 stIntelligence = null,
                 stWisdom = null,
                 stChatrisma = null,
@@ -85,8 +91,10 @@ data class Hero(val name:String?,
                 sleightOfHand = null,
                 stealth = null,
                 survival = null,
-                passivePerceptions = null)
-            return newHero
+                passivePerceptions = null,
+                proficiencyBonus = null,
+                inspiration = null
+            )
         }
     }
 }

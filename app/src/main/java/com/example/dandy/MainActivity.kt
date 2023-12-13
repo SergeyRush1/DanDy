@@ -60,13 +60,13 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 
-                NavHost(navController = navController, startDestination = "test") {
+                NavHost(navController = navController, startDestination = "main") {
                     composable("splash") {
                         SplashScreenDanD(navController = navController)
                     }
                     composable("test"){
                         //TestScreen(settingsSaver = settingsSaver, settings = settings)
-                        HeroImage()
+                        //HeroImage()
                     }
                     composable("settings"){
                         SettingsScreen(modifier = Modifier,
