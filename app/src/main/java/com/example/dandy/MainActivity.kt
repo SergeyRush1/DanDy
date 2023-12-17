@@ -1,6 +1,5 @@
 package com.example.dandy
 
-import HeroImage
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,7 +25,7 @@ import com.example.dand.screens.SplashScreenDanD
 import com.example.dand.screens.mainSreen.MainView
 import com.example.dand.screens.mainSreen.MainViewModel
 import com.example.dandy.screens.SettingsScreen
-import com.example.dandy.screens.mainSreen.screens.TestScreen
+import com.example.dandy.theme.components.croper.ImageZoom
 import com.example.dandy.ui.theme.DanDyTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
@@ -60,13 +59,16 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 
-                NavHost(navController = navController, startDestination = "main") {
+                NavHost(navController = navController, startDestination = "cropper") {
                     composable("splash") {
                         SplashScreenDanD(navController = navController)
                     }
                     composable("test"){
                         //TestScreen(settingsSaver = settingsSaver, settings = settings)
                         //HeroImage()
+                    }
+                    composable("cropper"){
+                        ImageZoom()
                     }
                     composable("settings"){
                         SettingsScreen(modifier = Modifier,

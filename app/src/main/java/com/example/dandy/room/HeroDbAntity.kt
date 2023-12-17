@@ -1,21 +1,15 @@
 package com.example.dandy.room
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.Index
-import androidx.room.PrimaryKey
-import com.example.dandy.DATA.BackGround
-import com.example.dandy.DATA.Hero
-import com.example.dandy.DATA.Race
+/*
 @Entity(tableName = "heroes",
     indices = [
         Index("name", unique = true)
     ])
 data class HeroDbAntity(@PrimaryKey(autoGenerate = true) val ID:Long,
                         @ColumnInfo(collate = ColumnInfo.NOCASE)val name:String?,
-                        val race: Race,
+//                        val race: Race,
                         val level:Int,
-                        val background: BackGround,
+                     //   val background: BackGround,
                         val alignment:String,
 
 
@@ -55,13 +49,14 @@ data class HeroDbAntity(@PrimaryKey(autoGenerate = true) val ID:Long,
                         val stealth:Int,
                         val survival:Int,
                         val passivePerceptions:Int,//пассивная внимательностьval
-    val proficiencyBonus:Int?,//бонус мастерства
-                        val inspiration:Int?,//вдохновение
+                        val proficiencyBonus:Int,//бонус мастерства
+                        val inspiration:Int,//вдохновение
 ){
+
     fun toHero():Hero = Hero(name,
-        race,
+      //  race,
         level,
-        background,
+      //  background,
         alignment,
         armor,
         HP,
@@ -82,9 +77,24 @@ data class HeroDbAntity(@PrimaryKey(autoGenerate = true) val ID:Long,
         animanHandling,
         arcana,
         athletics,
-        deseption, history, insight, investigation, medicine, nature, perception, perfomance, persuasion, religion, sleightOfHand, stealth, survival, passivePerceptions,proficiencyBonus,inspiration)
+        deseption,
+        history,
+        insight,
+        investigation,
+        medicine,
+        nature,
+        perception,
+        perfomance,
+        persuasion,
+        religion,
+        sleightOfHand,
+        stealth,
+        survival,
+        passivePerceptions,
+        proficiencyBonus,
+        inspiration)
 
-    companion object
-    fun fromHero (hero:Hero): HeroDbAntity = HeroDbAntity(ID = 0,name, race, level, background, alignment, armor, HP, tmHP, strenght, dexterity, constitution, intellice, wisdom, charisma, stStrenght, stDexterity, spConstitution, stIntelligence, stWisdom, stChatrisma, acrobatics, animanHandling, arcana, athletics, deseption, history, insight, investigation, medicine, nature, perception, perfomance, persuasion, religion, sleightOfHand, stealth, survival, passivePerceptions,proficiencyBonus,inspiration)
+  //  companion object
+
 }
-
+*/
